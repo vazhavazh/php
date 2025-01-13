@@ -9,11 +9,9 @@
                 <div class="row">
                     <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
                         <div class="banner-content content-padding">
-                            <h5 class="subtitle">A creative agency</h5>
-                            <h1 class="banner-title">We craft seo and digital markting services</h1>
-                            <p>We provide marketing services to startups and small businesses to looking for a
-                                partner for their digital media, design-area.We are a a startup company to be
-                                commited to work and time management.</p>
+                            <h5 class="subtitle"><?php echo get_post_meta($post->ID, 'subtitle', true); ?></h5>
+                            <h1 class="banner-title"><?php echo get_post_meta($post->ID, 'banner-title', true); ?></h1>
+                            <p><?php echo get_post_meta($post->ID, 'description', true); ?></p>
 
                             <a href="#" class="btn btn-white btn-circled">lets start</a>
                         </div>
@@ -26,7 +24,12 @@
 <!--MAIN HEADER AREA END -->
 
 <!--  ABOUT AREA START  -->
-<section id="intro" class="section-padding">
+  <section class="section-padding">
+    <div class="container mh-100vh">
+        <?php the_content(); ?>
+    </div>
+</section>
+<!-- <section id="intro" class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-sm-12 col-md-12">
@@ -88,7 +91,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--  ABOUT AREA END  -->
 
 <!--  SERVICE AREA START  -->

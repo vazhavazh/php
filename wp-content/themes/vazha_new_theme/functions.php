@@ -31,7 +31,7 @@ function vazha_enqueue_assets()
     wp_enqueue_style('vazhiko-style', get_template_directory_uri() . '/assets/css/style.css', array(), null);
     wp_enqueue_style('responsive', get_template_directory_uri() . '/assets/css/responsive.css');
 
-   
+
     // Скрипты  (deregister and register again) jquery
 //<!-- jQuery first, then Popper.js, then Bootstrap JS -->
     wp_deregister_script('jquery');
@@ -674,3 +674,12 @@ function vazha_customize_register($wp_customize)
 }
 
 add_action('customize_register', 'vazha_customize_register');
+
+
+// // adding bg to header
+// function add_scroll_script()
+// {
+//     wp_enqueue_script('navbar-scroll', get_template_directory_uri() . '/assets/js/navbar-scroll.js', [], null, true);
+//     echo ("КЛАС добавлен");
+// }
+// add_action('wp_enqueue_scripts', 'add_scroll_script');

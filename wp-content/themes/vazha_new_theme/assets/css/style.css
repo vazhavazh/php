@@ -156,7 +156,11 @@ h5.subtitle {
 }
 
 .section-padding {
-	padding: 90px 0px;
+	padding: 60px 0px;
+}
+
+.mh-100vh {
+	max-height: 100vh;
 }
 
 .section-heading {
@@ -416,7 +420,9 @@ h5.subtitle {
 }
 
 .trans-navigation {
-	background: transparent;
+	/* background: transparent; */
+	background: #111;
+	
 }
 
 .trans-navigation.header-white {
