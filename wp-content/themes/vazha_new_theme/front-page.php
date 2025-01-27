@@ -24,7 +24,7 @@
 <!--MAIN HEADER AREA END -->
 
 <!--  ABOUT AREA START  -->
-  <section class="section-padding">
+  <section class="section-padding section">
     <div class="container mh-100vh">
         <?php the_content(); ?>
     </div>
@@ -96,9 +96,9 @@
 
 <!--  SERVICE AREA START  -->
 <section id="about" class="bg-light">
-    <div class="about-bg-img d-none d-lg-block d-md-block"></div>
+    <!-- <div class="about-bg-img d-none d-lg-block d-md-block"></div> -->
     <div class="container">
-        <div class="row">
+        <div class="row justify-center">
             <div class="col-lg-7 col-sm-12 col-md-8">
                 <div class="about-content">
                     <h5 class="subtitle">About us</h5>

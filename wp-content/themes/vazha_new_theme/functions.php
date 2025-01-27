@@ -11,7 +11,10 @@ if (!function_exists('vazha_new_setup')) {
             'header-text' => '',
         ]);
         // add dynamic tag title
-        add_theme_support('');
+        add_theme_support('title-tag');
+        //  switch on miniatures for posts and pages
+        add_theme_support('post-thumbnails');
+        set_post_thumbnail_size( 457, 484, true);
     }
     add_action('after_setup_theme', 'vazha_new_setup');
 }
@@ -618,7 +621,7 @@ if (class_exists('\Walker_Nav_Menu')) {
                     $output .= '<span class="dropdown-header h6"' . $attributes . '>';
                 } elseif ('dropdown-divider' === $linkmod_type) {
                     // This is a divider.
-                    $output .= '<div class="dropdown-divider"' . $attributes . '>';
+                    $output .= '<ы class="dropdown-divider"' . $attributes . '>';
                 }
                 return $output;
             }
@@ -683,3 +686,30 @@ add_action('customize_register', 'vazha_customize_register');
 //     echo ("КЛАС добавлен");
 // }
 // add_action('wp_enqueue_scripts', 'add_scroll_script');
+
+## отключаем создание миниатюр файлов для указанных размеров
+add_filter( 'intermediate_image_sizes', 'delete_intermediate_image_sizes' );
+
+function delete_intermediate_image_sizes( $sizes ){
+
+	// размеры которые нужно удалить
+	return array_diff( $sizes, [
+		'medium_large',
+		'large',
+		'1536x1536',
+		'2048x2048',
+	] );
+}
+
+function vazha_new_theme_widgets_init() {
+    register_sidebar(array(
+        'name'          => esc_html__('Сайдбар блога', "vazha_new_theme"),
+        'id'            => 'sidebar-blog',
+        'description'   => __( 'This is the first footer widget area.', 'vazha' ),
+        'before_widget' => '<section id="%1$s" class="sidebar-widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h5 class="widget-title">',
+        'after_title'   => '</h5>',
+    ));
+}
+add_action("widgets_init", "vazha_new_theme_widgets_init");

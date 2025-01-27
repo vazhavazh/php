@@ -4,11 +4,13 @@
 <div class="page-banner-area page-blog" id="page-banner">
     <div class="overlay dark-overlay"></div>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 m-auto text-center col-sm-12 col-md-12">
+        <div class="row ">
+            <div class="col-lg-8  col-sm-12 col-md-12">
                 <div class="banner-content content-padding">
-                    <h1 class="banner-title">Latest news</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, perferendis?</p>
+                    <h1 class="banner-title">
+                        <?php printf(esc_html__("Результаты поиска по&nbsp;фразе: %s", "vazha_new_theme"), "<span>" . get_search_query() . "</span>"); ?>
+
+                    </h1>
                 </div>
             </div>
         </div>

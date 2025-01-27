@@ -422,7 +422,6 @@ h5.subtitle {
 .trans-navigation {
 	/* background: transparent; */
 	background: #111;
-	
 }
 
 .trans-navigation.header-white {
@@ -595,8 +594,6 @@ h5.subtitle {
 	background-size: cover;
 	position: relative;
 }
-
-
 
 .section-heading h2 {
 	margin-bottom: 20px;
@@ -1337,7 +1334,7 @@ BLOG PAGE
 }
 
 .blog-post img {
-	border-radius: 5px;
+	border-radius: 8px;
 }
 .blog-post .post-author i,
 .blog-post .post-info i {
@@ -1425,4 +1422,18 @@ BLOG SINGLE
 .comments img {
 	width: 80px;
 	height: 80px;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.h-300px {
+	height: 300px;
+}
+
+.flex-items-center {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }
