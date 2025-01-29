@@ -105,68 +105,7 @@
                 </div>
             </div>
 
-            <!-- BlOG SIDEBAR -->
-            <div class="col-lg-4">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <?php if (!dynamic_sidebar("sidebar-blog")): ?>
-                            <?php dynamic_sidebar("sidebar-blog"); ?>
-                        <?php endif; ?>
-                        <div class="sidebar-widget search">
-                            <div class="form-group">
-                                <input type="text" placeholder="search" class="form-control">
-                                <!-- <i class="fa fa-search"></i> -->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="sidebar-widget about-bar">
-                            <h5 class="mb-3">About us</h5>
-                            <p>Nostrum ullam porro iusto. Fugit eveniet sapiente nobis nesciunt velit cum fuga
-                                doloremque dignissimos asperiores</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="sidebar-widget category">
-                            <h5 class="mb-3">Category</h5>
-                            <ul class="list-styled">
-                                <li>Marketing</li>
-                                <li>Digital</li>
-                                <li>SEO</li>
-                                <li>Web Design</li>
-                                <li>Development</li>
-                                <li>Video</li>
-                                <li>Audio</li>
-                                <li>Slider</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="sidebar-widget tag">
-                            <a href="#">Web</a>
-                            <a href="#">Development</a>
-                            <a href="#">SEO</a>
-                            <a href="#">Marketing</a>
-                            <a href="#">Branding</a>
-                            <a href="#">Web Design</a>
-                            <a href="#">Tutorial</a>
-                            <a href="#">Tips</a>
-                            <a href="#">Design Trend</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="sidebar-widget download">
-                            <h5 class="mb-4">Download Files</h5>
-                            <a href="#"> <i class="fa fa-file-pdf"></i>Company Manual</a>
-                            <a href="#"> <i class="fa fa-file-pdf"></i>Company Profile</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            <?php get_sidebar();?>
         </div>
     </div>
 </section>
